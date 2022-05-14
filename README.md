@@ -142,3 +142,12 @@ useEffect(() => {
 
   ![image](public/images/use_reducer_vs_use_state.png)
 
+# Introducing React Context (Context API) (v-121)
+
+- It is used where long prop chain made.
+![image](public/images/long_prop_chanin.png)
+
+- It is used to trigger direct action without using component-wide prop chain
+![image](public/images/introduction_react_context.png)
+
+
