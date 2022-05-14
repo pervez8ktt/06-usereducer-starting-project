@@ -82,6 +82,7 @@ const [passwordState, dispatchPassword] =  useReducer(passwordReducer,{
 
 });
 
+//Object destructuring because we need to use it into useEffect dependancy
   const {isValid: emailIsValid} = emailState;
   const {isValid: passwordIsValid} = passwordState;
 
@@ -106,6 +107,8 @@ const [passwordState, dispatchPassword] =  useReducer(passwordReducer,{
       clearTimeout(identifier);
     };
   }, [emailIsValid, passwordIsValid]);
+// If we use emailState as dependency into useEffect, the useEffect function will be call every time with emailState changes.
+
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:'USER_INPUT', val: event.target.value});
